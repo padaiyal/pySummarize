@@ -1,0 +1,6 @@
+Summarize v1.0
+This tool has the following funcionalities
+- Timeline graphs
+	- CSV : Using column indices or regex
+- Frequency distribution 
+	- CSV : Using column indices or regex

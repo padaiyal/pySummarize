@@ -20,7 +20,7 @@ parser.add_option('--delimiter', type=str, help='Column delimiter', default=',')
 (options, args) = parser.parse_args()
 
 summary_type = options.summary_type
-file_type = options.file_type
+file_type = options.file_type.upper()
 graph_type = options.graph_type
 label_regex = options.label_regex
 legend_regex = options.legend_regex
@@ -84,12 +84,12 @@ if file_type.upper() == "CSV":
                     previous_label = str(i) if label_column_index is None else row[label_column_index]
                 current_label = str(i) if label_column_index is None else row[label_column_index]
                 if legend not in occurrences \
-                        and (legend_regex is None or (summary_type == "CSV" and re.match(legend_regex, legend))
-                             or (summary_type != "CSV" and re.findall(legend_regex, legend))):
+                        and (legend_regex is None or (file_type == "CSV" and re.match(legend_regex, legend))
+                             or (file_type != "CSV" and re.findall(legend_regex, legend))):
                     occurrences[legend] = 0
                 if legend not in legend_set \
-                        and (legend_regex is None or (summary_type == "CSV" and re.match(legend_regex, legend))
-                             or (summary_type != "CSV" and re.findall(legend_regex, legend))):
+                        and (legend_regex is None or (file_type == "CSV" and re.match(legend_regex, legend))
+                             or (file_type != "CSV" and re.findall(legend_regex, legend))):
                     legend_set.add(legend)
                     y_data[legend] = [0] * len(labels)
                 if legend in occurrences:
@@ -126,7 +126,8 @@ if file_type.upper() == "CSV":
                     frequency_distribution[label] += 1
                     pass
                 else:
-                    print('label_regex and label_column_index are None! Please check.')
+                    print('label_regex is None and either file is not a CSV or label_column_index is None! '
+                          'Please check.')
                     exit(1)
                 i += 1
                 if rows_limit != 0 and i == rows_limit:

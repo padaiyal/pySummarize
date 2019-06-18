@@ -15,6 +15,7 @@ parser.add_option('--legend_column_index', type=int, help='Column index for lege
 parser.add_option('--label_frequency', type=int, help='Label frequency, if label type is date, this value is parsed '
                                                       'as seconds else it\'s parsed as number of rows')
 parser.add_option('--rows_limit', type=int, help='Column index for legend to summarize', default=0)
+parser.add_option('--delimiter', type=str, help='Column delimiter', default=',')
 
 (options, args) = parser.parse_args()
 
@@ -61,7 +62,7 @@ normal_data = dict()
 sys.argv = [sys.argv[0]]
 args = termgraph.init_args(cmd=False)
 args["width"] = 50
-delimiter = ','
+delimiter = options.delimiter
 normal_type = None
 y_data = dict()
 
@@ -119,7 +120,7 @@ if file_type.upper() == "CSV":
                             frequency_distribution[match] = 0
                         frequency_distribution[match] += 1
                 elif label_column_index is not None:
-                    label = line.split(',')[label_column_index]
+                    label = line.split(delimiter)[label_column_index]
                     if label not in frequency_distribution:
                         frequency_distribution[label] = 0
                     frequency_distribution[label] += 1

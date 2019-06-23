@@ -1,0 +1,16 @@
+Summarize Version History
+
+v1.1
+Added:
+- Unit test coverage (#1)
+- Ability to use tool through a function call in addition to the original CLI tool (#1)
+
+Fixed:
+- IndexError thrown when a specified label_regex/legend_regex wasn't found (#2)
+
+v1.0
+This tool has the following funcionalities
+- Timeline graphs
+        - CSV : Using column indices or regex
+- Frequency distribution
+        - CSV : Using column indices or regex

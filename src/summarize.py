@@ -111,7 +111,9 @@ def summarize(
         term_data = [[item[1]] for item in frequency_distribution_sorted]
         labels = [item[0] for item in frequency_distribution_sorted]
         term_legend = [['']] * len(term_data)
-    if graph_type.lower() == 'term':
+    if len(term_data) == 0:
+        print("No matching data found!")
+    elif graph_type.lower() == 'term':
         termgraph.chart(
             supported_colors,
             term_data,

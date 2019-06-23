@@ -1,0 +1,24 @@
+normal         : [94m▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇[0m  - 67343 occurrences
+neptune        : [94m▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇[0m  - 41214 occurrences
+satan          : [94m▇▇[0m  - 3633 occurrences
+ipsweep        : [94m▇▇[0m  - 3599 occurrences
+portsweep      : [94m▇▇[0m  - 2931 occurrences
+smurf          : [94m▇[0m  - 2646 occurrences
+nmap           : [94m▇[0m  - 1493 occurrences
+back           : [94m▏[0m  - 956 occurrences
+teardrop       : [94m▏[0m  - 892 occurrences
+warezclient    : [94m▏[0m  - 890 occurrences
+pod            : [94m▏[0m  - 201 occurrences
+guess_passwd   : [94m▏[0m  - 53 occurrences
+buffer_overflow: [94m▏[0m  - 30 occurrences
+warezmaster    : [94m▏[0m  - 20 occurrences
+land           : [94m▏[0m  - 18 occurrences
+imap           : [94m▏[0m  - 11 occurrences
+rootkit        : [94m▏[0m  - 10 occurrences
+loadmodule     : [94m▏[0m  - 9 occurrences
+ftp_write      : [94m▏[0m  - 8 occurrences
+multihop       : [94m▏[0m  - 7 occurrences
+phf            : [94m▏[0m  - 4 occurrences
+perl           : [94m▏[0m  - 3 occurrences
+spy            : [94m▏[0m  - 2 occurrences
+
